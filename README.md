@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/license-MIT-blueviolet.svg)
 
-# Programming Project 02 - Author Map
+# AuthorMap
 
 **Goal**
 
@@ -51,7 +51,7 @@ Please refer [Contribution.md](Contribution.md) for more details about each grou
 ## Installation & Configuration
 
 Clone the git repository.  
-`git clone https://gitlab.informatik.uni-bonn.de/bschultz/group_2.git`
+`git clone https://github.com/zli9/AuthorMap.git`
 
 ### Package
 
@@ -69,7 +69,7 @@ The frontend will be running on
 ### Docker
 
 Commands for installing the docker image
-`cd group_2`   
+`cd AuthorMap`   
 `sudo docker build --no-cache -t authormaps-test --build-arg FLASK_PORT=8080 .`  
 The --build-arg FLASK_PORT determines on which port the flask application will be running on (default 8080).  
 
@@ -82,11 +82,11 @@ By default the GUI will run on
 
 ### Docker-Compose
 You can specify the FLASK_PORT in the .env file  
-`cd group_2`  
+`cd AuthorMap`  
 `vim .env`  
 
 Commands running the docker-compose  
-`cd group_2`   
+`cd AuthorMap`   
 `sudo docker-compose up -d`  
 
 By default the GUI will run on  
@@ -172,7 +172,7 @@ You can search Authors via the Graphical User Interface.
 - Please let search requests finish before entering a new one
 - Substitue special characters (ÜäöÖÄß) with their respective counterparts (AUua)
 
-![](https://gitlab.informatik.uni-bonn.de/bschultz/group_2/-/raw/main/images/gui_home-1.png)
+![](./images/gui_home-1.png)
 
 
 You will be redirected to the search result page after the search request is finished.
@@ -181,4 +181,4 @@ You will be redirected to the search result page after the search request is fin
 - AuthorMaps may suggest similiar named Authors for future search requests
 - You can choose to download the displayed network graph in high resolution by clicking on one of the downloadformats below.
 
-![](https://gitlab.informatik.uni-bonn.de/bschultz/group_2/-/raw/main/images/results_page-0.png)
+![](./images/results_page-0.png)
