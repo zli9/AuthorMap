@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block title %}{% endblock %}
+{% block head %}{{ super() }}{% endblock %}
+{% block page %}{% endblock %}
+{% block heading %}{{ super() }}{% endblock %}
+
+
+{% block content %}
+
+<div id="sidepanel" class="sidepanel">
+	<h1>{{first_name}} {{last_name}}</h1>
+<p>AuthorMaps found {{coauthors|length}} co-authors, {{current_time | datetimefilter}}</p>
+
+<hr>
+
+{%if similiar_authors != None%}
+<p>AuthorMaps also found other authors with similar names. You may wish to specify your search:</p>
+{%for author in similiar_authors%}
+<li>{{author}}</li>
+{%endfor%}
+{%endif%}
+
+<hr>
+
+<h4>Co-Authors:</h4>
+<table id="authorinfotable" style="overflow-y:scroll; height:200px; display:block;">
+	{%for coauthor in coauthors%}
+		<tr>
+			<td style="width:90%;">{{coauthor}}</td> 
+			<td><input type="checkbox" name="authorcheckboxes" value="{{coauthor}}"></td>
+		</tr>
+	{%endfor%}
+</table>
+
+<hr>
+
+<p>Select two co-authors to display the number of shared publications between them:</p>
+<p style="font-size:20; text-align:center; border: 1px solid #f5f5f5; border-radius: 15px" id="num_shared_pub">None</p>
+
+<hr>
+<form action="/downloadauthormap" method='POST' style="text-align:center;"> 
+	<h4>Download</h4>
+	<button class="downloadformat" type="submit" name="downloadformat" value="png,{{first_name}},{{last_name}}">PNG</button>
+	<button class="downloadformat" type="submit" name="downloadformat" value="jpg,{{first_name}},{{last_name}}">JPG</button>
+	<button class="downloadformat" type="submit" name="downloadformat" value="pdf,{{first_name}},{{last_name}}">PDF</button>
+	<button class="downloadformat" type="submit" name="downloadformat" value="svg,{{first_name}},{{last_name}}">SVG</button>
+</form>
+
+</div>
+
+<div class="networkimage">
+<img src="static/images/authormap_plot.png" style="width:100%;">
+</div>
+
+{% endblock %}

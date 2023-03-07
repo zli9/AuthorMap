@@ -1,0 +1,36 @@
+{% from "macros.html" import nav_link with context %}
+<html>
+  <head>
+    {% block head %}
+    <title>AuthorMaps</title>
+    {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse" role="navigation" style="background-color: #242424; border: 1px none #3b3b3b; border-radius: 0;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+        	<a class="navbar-brand" href="/">AuthorMaps</a>
+		<a class="navbar-brand" href="https://gitlab.informatik.uni-bonn.de/bschultz/group_2">GitLab</a>
+		<a class="navbar-brand" href="/about">About This Project</a>
+
+	</div>
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+	{%block heading %}{% endblock %}
+	{%block content %}{% endblock %}
+	{% block footer %}{% endblock %}
+    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="static/js/sharedpublications.js"></script>
+  <script src="static/js/loader.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

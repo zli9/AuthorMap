@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}{{my_name}}{% endblock %}
+{% block head %}{{ super() }}{% endblock %}
+{% block page %}{{my_name}}{% endblock %}
+{% block heading %}{{ super() }}{% endblock %}
+{% block content %}
+<div style="margin-left:2%">
+<h1>Uh oh, something went wrong:</h1>
+{% if error_msg == 'invalid_char' %}
+	<h3>Your search contains an invalid character!</h3>
+	<li>Please ensure the author name does not include any of the following characters</li>
+	<li>, @ € µ . * + ~ ! " § $ % & / ( ) = ? ` ´ # \ ' ; : - _ < > | ^ ° </li>
+<li>If your search term contained Umlaute such as Ää, Öö, Üü you should substitute them e.g.: Ä with A or ü with u. </li>
+<li>If your search term contained a "," please separate first, last, as well as middle names with spaces.</li>
+
+{% elif error_msg == 'only_first_name' %}
+	<h3>Your search entry is comprised of a single first or last name.</h3>
+	<li>Please ensure that the search entry contains both the first and last name.</li>
+	<li>You may also include middle names between first and last name.</li>
+
+{% elif error_msg == 'reduplicated_name' %}
+	<h3>Your entered first name is exactly the same as the last name.</h3>
+	<li><a href="https://en.wikipedia.org/wiki/List_of_people_with_reduplicated_names">Reduplicated names</a> are extremly rare and currently not implemented in AuhtorMaps</li>
+
+
+
+{% endif %}
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block title %}{% endblock %}
+{% block head %}{{ super() }}{% endblock %}
+{% block page %}{% endblock %}
+{% block heading %}{{ super() }}{% endblock %}
+
+
+{% block content %}
+
+<!--<div style="width:100%; top:20%; position:absolute; background: #4f5c69; height:50%; margin-left:0;"></div>
+	-->
+<p style="position:absolute; text-align:center; width:100%; top:20%; font-size:52;">
+	AuthorMaps
+</p>
+
+
+<form class="searchbar" method="POST" action="/getauthornetwork" role="search" >
+	<label class="searchbarlabel" for="search">Author Maps Search</label>
+	<input class="searchbarinput" id="search" name="search" type="search" placeholder="Search author..." oninvalid="deactivateLoader()" autofocus required />
+	<button class="searchbarbutton" type="submit" onclick="activateLoader()">Go</button>    
+</form>
+
+<p style="position:absolute; text-align:center; width:100%; top:38%;">
+	AuthorMaps is a tool to retrieve and visualize co-author networks via PubMed&#174;.
+<br> 
+	To search for an author, type in their full name starting with their first name e.g.: Pietro Pilo Boyl, Martin Hofmann-Apitius or James E A Webb.
+	<br>
+</p>
+
+
+<p style="position:absolute; text-align:center; top:50%; width:100%; visibility:hidden;" id="loadertext">Fetching publication data, this may take several minutes ☕.<br>Please wait for the process to finish before starting a new search request.</p>
+
+<div class="loader" id="loader" style="visibility:hidden;">
+	<div class="bar1"></div>
+	<div class="bar2"></div>
+	<div class="bar3"></div>
+	<div class="bar4"></div>
+	<div class="bar5"></div>
+    	<div class="bar6"></div>
+</div>
+
+{% endblock %}

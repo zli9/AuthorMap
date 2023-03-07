@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}{% endblock %}
+{% block head %}{{ super() }}{% endblock %}
+{% block page %}{% endblock %}
+{% block heading %}{{ super() }}{% endblock %}
+{% block content %}
+<div style="margin-left:2%">
+<h1>Uh oh, something went wrong:</h1>
+<h3>Unfortunately, there were no publications found for your author: {{first_name}} {{last_name}}!</h3>
+<li>Please verify whether you spelled their name correctly.</li>
+<li>Make sure your search query starts with the first name of the author and ends with the last name e.g.: "Pietro P Boyl"</li>
+<li>Make sure you abbreviate middle name with the first letter of the middlename e.g.: "Pietro Pilo Boyl" would be correctly searched with "Pietro P Boyl".</li>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}{% endblock %}
+{% block head %}{{ super() }}{% endblock %}
+{% block page %}{% endblock %}
+{% block heading %}{{ super() }}{% endblock %}
+{% block content %}
+<div style="margin-left:2%">
+<h1>Uh oh, something went wrong:</h1>
+<h3>Unfortunately, there were over 1000 publications found for the author: {{first_name}} {{last_name}}!</h3>
+<li>You may want to increase the spceificity of your search query.</li>
+</div>
+
+
+
+{% endblock %}

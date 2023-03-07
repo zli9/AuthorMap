@@ -1,0 +1,209 @@
+body {
+   color: #f5f5f5;
+   background-color: #242424;
+   font-family: 'Open Sans', sans-serif;
+}
+
+
+hr {
+	display: block;
+	height: 1px;
+        border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4 {font-family: 'Open Sans', sans-serif;}
+
+
+
+.container{
+	max-width: 100%; 
+	padding-left: 0;
+}
+
+#authorinfotable {
+font-family: 'Open Sans', sans-serif;
+border-collapse: collapse;
+}
+
+#authorinfotable td, #authorinfotable th {
+border: 1px none #3b3b3b;
+padding: 8px;
+}
+
+#authorinfotable tr:nth-child(odd){background-color: #3b3b3b;}
+#authorinfotable tr:nth-child(even){background-color: #3b3b3b;}
+
+#authorinfotable tr:hover {background-color: #3b3b3b; color:#f5f5f5}
+
+#authorinfotable th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #04AA6D;
+}
+
+.sidepanel {
+	width: 20%; 
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #3b3b3b;
+	overflow-x: hidden; 
+	padding-top: 60px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 162%;
+}
+
+.networkimage {
+	top: 5%;
+	left: 20%;
+	border: none;
+	position: absolute;
+}
+
+
+/* Download buttons for graph plot */
+.downloadformat{
+	width: 70px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #3b3b3b;
+	color: #f5f5f5;
+	border: 1px solid #f5f5f5;
+}
+
+/* Searchbar */
+/* https://codepen.io/liamj */
+.searchbar {
+	width: 30rem;
+	position: absolute;
+	left: 50%;
+	top: 30%;
+	margin-left: -15rem;
+	background: #4f5c69;
+	border-radius: 0.7rem;
+}
+
+.searchbarinput, .searchbarbutton {
+	height: 5rem;
+	border: 0;
+	color: #000000;
+	font-size: 1.8rem;
+	}
+
+.searchbarinput[type="search"] {
+	outline: 0;
+	width: 100%;
+	background: #fff;
+	padding: 0 1.6rem;
+	border-radius: 0.7rem;
+	appearance: none; 
+	transition: all 0.3s cubic-bezier(0, 0, 0.43, 1.45);
+	transition-property: width, border-radius;
+	z-index: 1;
+	position: relative;
+	}
+
+.searchbarbutton {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 6rem;
+	font-weight: bold;
+	background: #4f5c69;
+	color: #f5f5f5;
+	border-radius: 0 0.7rem 0.7rem 0;
+	}
+	
+.searchbarinput:not(:placeholder-shown) {
+	border-radius: 0.7rem 0 0 0.7rem;
+	width: calc(100% - 6rem);
+	+ .searchbarbutton {display: block;}
+	}
+
+.searchbarlabel {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	}
+
+
+/*Loading Bar */
+/*MIT License */
+/*https://codepen.io/johnheiner*/
+.loader {
+	margin: 0 auto;
+	width: 60px;
+	height: 50px;
+	text-align: center;
+	font-size: 10px;
+	position: absolute;
+	top: 47%;
+	left: 50%;
+	-webkit-transform: translateY(-50%) translateX(-50%);
+	}
+	.loader > div {
+		height: 100%;
+		width: 8px;
+		display: inline-block;
+		float: left;
+		margin-left: 2px;
+		-webkit-animation: delay 0.8s infinite ease-in-out;
+		animation: delay 0.8s infinite ease-in-out;
+		}
+	.loader .bar1 {
+		background-color: #f5f5f5;
+		}
+	.loader .bar2 {
+		background-color: #f5f5f5;
+		-webkit-animation-delay: -0.7s;
+		animation-delay: -0.7s;
+		}
+	.loader .bar3 {
+		background-color: #f5f5f5;
+		-webkit-animation-delay: -0.6s;
+		animation-delay: -0.6s;
+		}
+	.loader .bar4 {
+		background-color: #f5f5f5;
+		-webkit-animation-delay: -0.5s;
+		animation-delay: -0.5s;
+		}
+	.loader .bar5 {
+		background-color: #f5f5f5;
+		-webkit-animation-delay: -0.4s;
+		animation-delay: -0.4s;
+		}
+	.loader .bar6 {
+		background-color: #f5f5f5;
+		-webkit-animation-delay: -0.3s;
+		animation-delay: -0.3s;
+		}
+
+@-webkit-keyframes delay {
+	0%, 40%, 100% {
+	-webkit-transform: scaleY(0.05);
+	}
+	20% {
+	-webkit-transform: scaleY(1);
+	}
+}
+@keyframes delay {
+	0%, 40%, 100% {
+	transform: scaleY(0.05);
+	-webkit-transform: scaleY(0.05);
+	}
+	20% {
+	transform: scaleY(1);
+	-webkit-transform: scaleY(1);
+	}
+}
