@@ -1,8 +1,8 @@
-# Programming Project 02 - Author Map
+# Author Map
 
 ## Contribution
 
-### Dhwani
+### Dhwani Solanki
 Team role: Backend development, Requesting to APIs, Download and extraction of relevant information from cache files.
 
 Work done:
